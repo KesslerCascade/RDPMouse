@@ -9,7 +9,7 @@ license="MIT"
     authors="KesslerCascade"
     description="""
 Fixes mouse look when playing over RDP (Remote Desktop Protocol), and
-also allows camera rotation with the keyboard.
+allows camera rotation with the keyboard.
 """
 
 [[dependencies.rdpmouse]]

@@ -3,7 +3,7 @@
   "id": "rdpmouse",
   "version": "${version}",
   "name": "RDPMouse",
-  "description": "Fixes mouse look when playing over RDP (Remote Desktop Protocol), and also allows camera rotation with the keyboard.",
+  "description": "Fixes mouse look when playing over RDP (Remote Desktop Protocol), and allows camera rotation with the keyboard.",
   "license": "MIT",
   "environment": "client",
   "authors": [
