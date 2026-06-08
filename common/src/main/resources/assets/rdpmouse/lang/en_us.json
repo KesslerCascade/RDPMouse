@@ -1,0 +1,13 @@
+{
+  "key.category.rdpmouse": "RDP Mouse",
+
+  "rdpmouse.status.on": "RDP Mode: On",
+  "rdpmouse.status.off": "RDP Mode: Off",
+
+  "key.rdpmouse.toggle": "Toggle RDP Mode",
+  "key.rdpmouse.freemouse": "Free Mouse (Hold)",
+  "key.rdpmouse.pan_left": "Pan Camera Left",
+  "key.rdpmouse.pan_right": "Pan Camera Right",
+  "key.rdpmouse.pan_up": "Pan Camera Up",
+  "key.rdpmouse.pan_down": "Pan Camera Down"
+}
