@@ -15,8 +15,8 @@
   "mixins": ["rdpmouse.mixins.json"],
   "accessWidener": "rdpmouse.accesswidener",
   "depends": {
-    "fabricloader": ">=0.15",
+    "fabricloader": ">=0.19.2",
     "fabric-api": "*",
-    "minecraft": ">=1.21.11"
+    "minecraft": "~26.1"
   }
 }

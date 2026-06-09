@@ -12,16 +12,19 @@ license="MIT"
 [[dependencies.rdpmouse]]
     modId="neoforge"
     type="required"
-    versionRange="[21.11,)"
+    versionRange="[26.1,)"
     ordering="NONE"
     side="CLIENT"
 
 [[dependencies.rdpmouse]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21.11,)"
+    versionRange="[26.1]"
     ordering="NONE"
     side="BOTH"
+
+[[accessTransformers]]
+    file="META-INF/accesstransformer.cfg"
 
 [[mixins]]
     config="rdpmouse.mixins.json"

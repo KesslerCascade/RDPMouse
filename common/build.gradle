@@ -5,5 +5,5 @@ architectury {
 loom.accessWidenerPath.set(file('src/main/resources/rdpmouse.accesswidener'))
 
 dependencies {
-    modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
+    compileOnly "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
 }

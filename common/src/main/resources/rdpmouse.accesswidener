@@ -1,4 +1,4 @@
-accessWidener	v2	named
+accessWidener	v2	official
 
 accessible	field	net/minecraft/client/MouseHandler	accumulatedDX	D
 accessible	field	net/minecraft/client/MouseHandler	accumulatedDY	D

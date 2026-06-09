@@ -79,7 +79,7 @@ public final class RDPMouseClient {
 
             if (mc.player != null) {
                 String key = RDPMouseState.enabled ? "rdpmouse.status.on" : "rdpmouse.status.off";
-                mc.player.displayClientMessage(Component.translatable(key), true);
+                mc.player.sendOverlayMessage(Component.translatable(key));
             }
         }
 
