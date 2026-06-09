@@ -3,46 +3,50 @@ package kesslercascade.rdpmouse;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import org.lwjgl.glfw.GLFW;
 
 public final class RDPMouseClient {
 
     public static final RDPMouseClient INSTANCE = new RDPMouseClient();
 
+    public static final KeyMapping.Category RDPMOUSE_CATEGORY =
+            KeyMapping.Category.register(Identifier.fromNamespaceAndPath("rdpmouse", "category"));
+
     public static final KeyMapping TOGGLE_KEY = new KeyMapping(
             "key.rdpmouse.toggle",
             GLFW.GLFW_KEY_F8,
-            "key.category.rdpmouse"
+            RDPMOUSE_CATEGORY
     );
 
     public static final KeyMapping FREE_MOUSE_KEY = new KeyMapping(
             "key.rdpmouse.freemouse",
             GLFW.GLFW_KEY_LEFT_ALT,
-            "key.category.rdpmouse"
+            RDPMOUSE_CATEGORY
     );
 
     public static final KeyMapping PAN_LEFT = new KeyMapping(
             "key.rdpmouse.pan_left",
             GLFW.GLFW_KEY_LEFT,
-            "key.category.rdpmouse"
+            RDPMOUSE_CATEGORY
     );
 
     public static final KeyMapping PAN_RIGHT = new KeyMapping(
             "key.rdpmouse.pan_right",
             GLFW.GLFW_KEY_RIGHT,
-            "key.category.rdpmouse"
+            RDPMOUSE_CATEGORY
     );
 
     public static final KeyMapping PAN_UP = new KeyMapping(
             "key.rdpmouse.pan_up",
             GLFW.GLFW_KEY_UP,
-            "key.category.rdpmouse"
+            RDPMOUSE_CATEGORY
     );
 
     public static final KeyMapping PAN_DOWN = new KeyMapping(
             "key.rdpmouse.pan_down",
             GLFW.GLFW_KEY_DOWN,
-            "key.category.rdpmouse"
+            RDPMOUSE_CATEGORY
     );
 
     private boolean wasFreeMouse = false;
@@ -62,7 +66,7 @@ public final class RDPMouseClient {
             RDPMouseState.enabled = !RDPMouseState.enabled;
             RDPMouseState.reset();
 
-            long window = mc.getWindow().getWindow();
+            long window = mc.getWindow().handle();
             if (mc.mouseHandler.isMouseGrabbed()) {
                 if (RDPMouseState.enabled) {
                     GLFW.glfwSetInputMode(window, GLFW.GLFW_CURSOR, GLFW.GLFW_CURSOR_HIDDEN);

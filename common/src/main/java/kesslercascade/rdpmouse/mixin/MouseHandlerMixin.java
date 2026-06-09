@@ -1,5 +1,6 @@
 package kesslercascade.rdpmouse.mixin;
 
+import com.mojang.blaze3d.platform.Window;
 import kesslercascade.rdpmouse.RDPMouseCursor;
 import kesslercascade.rdpmouse.RDPMouseState;
 import net.minecraft.client.MouseHandler;
@@ -23,9 +24,9 @@ public abstract class MouseHandlerMixin {
     @Unique private long rdpmouse$window;
 
     @Inject(method = "setup", at = @At("RETURN"))
-    private void rdpmouse$onSetup(long window, CallbackInfo ci) {
-        rdpmouse$window = window;
-        rdpmouse$vanillaCallback = GLFW.glfwSetCursorPosCallback(window, (win, x, y) -> {
+    private void rdpmouse$onSetup(Window window, CallbackInfo ci) {
+        rdpmouse$window = window.handle();
+        rdpmouse$vanillaCallback = GLFW.glfwSetCursorPosCallback(rdpmouse$window, (win, x, y) -> {
             if (RDPMouseState.enabled && mouseGrabbed) {
                 if (RDPMouseState.lastX == RDPMouseState.UNSET) {
                     RDPMouseState.lastX = x;

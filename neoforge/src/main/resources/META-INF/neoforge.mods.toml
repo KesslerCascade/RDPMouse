@@ -7,22 +7,19 @@ license="MIT"
     version="${version}"
     displayName="RDPMouse"
     authors="KesslerCascade"
-    description="""
-Fixes mouse look when playing over RDP (Remote Desktop Protocol), and
-allows camera rotation with the keyboard.
-"""
+    description="Fixes mouse look when playing over RDP (Remote Desktop Protocol), and allows camera rotation with the keyboard."
 
 [[dependencies.rdpmouse]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1,)"
+    versionRange="[21.11,)"
     ordering="NONE"
     side="CLIENT"
 
 [[dependencies.rdpmouse]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21.1,)"
+    versionRange="[1.21.11,)"
     ordering="NONE"
     side="BOTH"
 

@@ -1,5 +1,5 @@
 {
-  "key.category.rdpmouse": "RDP Mouse",
+  "key.category.rdpmouse.category": "RDP Mouse",
 
   "rdpmouse.status.on": "RDP Mode: On",
   "rdpmouse.status.off": "RDP Mode: Off",
